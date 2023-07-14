@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+
+  h2 {
+    text-align: center;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  textarea {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+  }
+  
+  ul {
+    margin: 0 auto;
+    width: 80%;
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  footer {
+    text-align: center;
+  }
+  
+  #input-text {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+  
+  #metrics-list li {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  #reset-button {
+    display: block;
+    margin: 10px auto;
+    font-size: 16px;
+    padding: 10px 20px
+  }
+
