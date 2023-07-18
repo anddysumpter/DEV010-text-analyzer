@@ -10,7 +10,9 @@ const analyzer = {
     return text.length;
   },
   getCharacterCountExcludingSpaces: (text) => {
-    return text.replace(/\s/g, '').length;
+    //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
+    const characterCountExcludingSpaces = text.replace(/[^\w\s]|_/g, "").replace(/\s+/g, "").trim().length;
+    return characterCountExcludingSpaces;
   },
   getAverageWordLength: (text) => {    
     const wordL = text.split(" ");//la función split separa la cadena text con el espacio (" "), cada palabra o número se convierte en elemento en el array `wordL`
