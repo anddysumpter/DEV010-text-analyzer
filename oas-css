@@ -1,0 +1,24 @@
+
+> text-analyzer@1.0.0 pretest
+> npm run eslint && npm run htmlhint
+
+
+> text-analyzer@1.0.0 eslint
+> eslint --ext .js src/ test/
+
+
+> text-analyzer@1.0.0 htmlhint
+> htmlhint src/*.html
+
+
+Scanned 1 files, no errors found (10 ms).
+
+> text-analyzer@1.0.0 test
+> jest --verbose --coverage test/analyzer.spec.js
+
+-------------|---------|----------|---------|---------|-------------------
+File         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------|---------|----------|---------|---------|-------------------
+All files    |      90 |       75 |     100 |   88.88 |                   
+ analyzer.js |      90 |       75 |     100 |   88.88 | 5,18              
+-------------|---------|----------|---------|---------|-------------------

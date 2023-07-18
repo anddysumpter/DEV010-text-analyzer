@@ -1,7 +1,7 @@
-import analyzer from './analyzer.js';  // importa el objeto 
+import analyzer from './analyzer.js';
 
 const textarea = document.querySelector('textarea');
-const metricsList = document.querySelector('ul');
+const metricsList = document.querySelector('ul.all');
 const resetButton = document.getElementById('reset-button');
 
 textarea.addEventListener('keyup', updateMetrics);
@@ -10,7 +10,6 @@ resetButton.addEventListener('click', clearInputText);
 function updateMetrics() {
   const text = textarea.value;
 
-  
   if (!text.trim()) {
     resetMetrics();
     return;
@@ -23,21 +22,21 @@ function updateMetrics() {
   const numberSum = analyzer.getNumberSum(text);
   const averageWordLength = analyzer.getAverageWordLength(text);
 
-  metricsList.querySelector('[data-testid="word-count"]').textContent = `Recuento de palabras: ${wordCount}`;
-  metricsList.querySelector('[data-testid="character-count"]').textContent = `Recuento de caracteres: ${characterCount}`;
-  metricsList.querySelector('[data-testid="character-no-spaces-count"]').textContent = `Recuento de caracteres (sin espacios): ${characterCountExcludingSpaces}`;
-  metricsList.querySelector('[data-testid="number-count"]').textContent = `Recuento de números: ${numberCount}`;
-  metricsList.querySelector('[data-testid="number-sum"]').textContent = `Suma total de números: ${numberSum}`;
-  metricsList.querySelector('[data-testid="word-length-average"]').textContent = `Longitud media de palabras: ${averageWordLength.toFixed(2)}`;
+  metricsList.querySelector('[data-testid="word-count"]').textContent = `Palabras: ${wordCount}`;
+  metricsList.querySelector('[data-testid="character-count"]').textContent = `Caracteres: ${characterCount}`;
+  metricsList.querySelector('[data-testid="character-no-spaces-count"]').textContent = `Caracteres sin espacios: ${characterCountExcludingSpaces}`;
+  metricsList.querySelector('[data-testid="number-count"]').textContent = `Números: ${numberCount}`;
+  metricsList.querySelector('[data-testid="number-sum"]').textContent = `Suma de números: ${numberSum}`;
+  metricsList.querySelector('[data-testid="word-length-average"]').textContent = `Promedio longitud: ${averageWordLength.toFixed(2)}`;
 }
 
 function resetMetrics() {
-  metricsList.querySelector('[data-testid="word-count"]').textContent = 'Recuento de palabras: 0';
-  metricsList.querySelector('[data-testid="character-count"]').textContent = 'Recuento de caracteres: 0';
-  metricsList.querySelector('[data-testid="character-no-spaces-count"]').textContent = 'Recuento de caracteres (sin espacios): 0';
-  metricsList.querySelector('[data-testid="number-count"]').textContent = 'Recuento de números: 0';
-  metricsList.querySelector('[data-testid="number-sum"]').textContent = 'Suma total de números: 0';
-  metricsList.querySelector('[data-testid="word-length-average"]').textContent = 'Longitud media de palabras: 0';
+  metricsList.querySelector('[data-testid="word-count"]').textContent = 'Palabras: 0';
+  metricsList.querySelector('[data-testid="character-count"]').textContent = 'Caracteres: 0';
+  metricsList.querySelector('[data-testid="character-no-spaces-count"]').textContent = 'Caracteres sin espacios: 0';
+  metricsList.querySelector('[data-testid="number-count"]').textContent = 'Números: 0';
+  metricsList.querySelector('[data-testid="number-sum"]').textContent = 'Suma de números: 0';
+  metricsList.querySelector('[data-testid="word-length-average"]').textContent = 'Promedio longitud: 0';
 }
 
 function clearInputText() {

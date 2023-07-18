@@ -1,60 +1,54 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
-    <title>Analizador de texto</title>
-      <link rel="stylesheet" href="style.css" />
+  <title>Analizador de texto</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   
 <header>
-  <h1> Analizador de Texto </h1>
+  <h1>Analizador de texto</h1>
 </header>
 <br>
+  
+<h2>Bienvenido al Analizador de texto! Por favor ingrese en el recuadro siguiente el texto para que sea analizado</h2>
+  
+<textarea name="user-input" rows="6" placeholder="Escribe tu texto aqui"></textarea>
 
-  
-<h2> Bienvenido al Analizador de texto! Por favor ingrese en el recuadro siguiente el texto para que sea analizado</h2>
-  
-  <textarea name="user-input" rows="6" placeholder="Escribe tu texto aqui"></textarea>
-
 <br>
 <br>
 <br>
 <br>
   
-<ul>
-  <li data-testid="word-count">Recuento de palabras: 0</li>
+<ul class="all">
+  <li class="box" data-testid="character-count">Caracteres: 0</li>
   <br>
-  <li data-testid="character-count">Recuento de caracteres: 0</li>
+  <li class="box" data-testid="character-no-spaces-count">Caracteres sin espacios: 0</li>
   <br>
-  <li data-testid="character-no-spaces-count">Recuento de caracteres (sin espacios): 0</li>
+  <li class="box" data-testid="word-count">Palabras: 0</li>
   <br>
-  <li data-testid="number-count">Recuento de números: 0</li>
+  <li class="box" data-testid="number-count">Números: 0</li>
   <br>
-  <li data-testid="number-sum">Suma total de números: 0</li>
+  <li class="box" data-testid="number-sum">Suma de números: 0</li>
   <br>
-  <li data-testid="word-length-average">Longitud media de palabras: 0</li>
+  <li class="box" data-testid="word-length-average">Promedio longitud: 0</li>
 </ul>
   
 <br>
 <br>
 
-  <button id="reset-button">LIMPIAR</button>
+<button id="reset-button">LIMPIAR</button>
   
 <br>
 <br>
 
 <footer>
- <p>Desarrollado por : Andrea Fernanda García Enriquez</p>
+  <p>Desarrollado por: Andrea Fernanda García Enriquez</p>
 </footer>
-
   
 <script src="analyzer.js" type="module"></script>
 <script src="index.js" type="module"></script>
-
-
 
 </body>
 </html>
