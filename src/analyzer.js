@@ -4,15 +4,18 @@ const analyzer = {
     if (!text.trim()) {
       return 0;
     }
-    return text.trim().split(/\s+/).length;
+    return text.trim().split(/\s+/).length;//Recibe un parametro text para contar cantidad de palabras en un texto, elimina espacios con trim 
+    //y usamos un split para dividir el texto en palabras para que al final retorne la cantidad de palabras encontradas
   },
   getCharacterCount: (text) => {
-    return text.length;
+    return text.length; //Recibe un parametro text , el proposito es contar la cantidad total de caracteres,
+    //incluyendo espacios en el texto, luego se retorna la longitud usando text.length
   },
   getCharacterCountExcludingSpaces: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
     const characterCountExcludingSpaces = text.replace(/[^\w\s]|_/g, "").replace(/\s+/g, "").trim().length;
-    return characterCountExcludingSpaces;
+    return characterCountExcludingSpaces;//recibe un parametro text, el proposito es contar la cantidad total de caracteres
+    //en el texto excluyendo los espacios y signos de puntuacion.
   },
   getAverageWordLength: (text) => {    
     const wordL = text.split(" ");//la función split separa la cadena text con el espacio (" "), cada palabra o número se convierte en elemento en el array `wordL`
@@ -28,11 +31,14 @@ const analyzer = {
   },
   getNumberCount: (text) => {
     const numbers = text.match(/\b\d+(\.\d+)?\b/g);
-    return numbers ? numbers.length : 0;
+    return numbers ? numbers.length : 0;//Recibe un prametro text, el proposito es contar la cantidad de numeros presentes en el texto
+    //retorna la cantidad de numeros encontrados
   },
   getNumberSum: (text) => {
     // Obtener una lista de números del texto usando expresiones regulares
-    const numbers = text.match(/\b\d+(\.\d+)?\b/g);
+    const numbers = text.match(/\b\d+(\.\d+)?\b/g);//Recibe  un parametro text, calcula la suma de todos los numeros
+    //se utiliza la expresion regular ("") para encontrar los numeros en el texto  y con reduce se convierten los numeros en punto flontante  y luego se suman
+    //el resutlado se retorna como la suma total de los numeros
 
     if (!numbers) {
       // Si no se encuentran números, se retorna 0

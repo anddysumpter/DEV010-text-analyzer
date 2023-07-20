@@ -1,20 +1,24 @@
 import analyzer from './analyzer.js';
 
+
+//Obtener referencias a los elementos del DOM,
 const textarea = document.querySelector('textarea');
 const metricsList = document.querySelector('ul.all');
 const resetButton = document.getElementById('reset-button');
 
+//Agregar eventos a los elementos
 textarea.addEventListener('keyup', updateMetrics);
 resetButton.addEventListener('click', clearInputText);
 
 function updateMetrics() {
-  const text = textarea.value;
+  const text = textarea.value;//Obtener el texto ingresado en textarea
 
+  //Si el texto esta vacio o solo contiene espacios en blanco, se reinician las metricas y se retorna
   if (!text.trim()) {
     resetMetrics();
     return;
   }
-
+  //Si hay texto, se llaman las funciones del modulo analyzer para obtener metricas
   const wordCount = analyzer.getWordCount(text);
   const characterCount = analyzer.getCharacterCount(text);
   const characterCountExcludingSpaces = analyzer.getCharacterCountExcludingSpaces(text);
