@@ -3,16 +3,16 @@
 ## 1. Visualización del Proyecto
 
 * Proyecto.
-![Analizador de texto](<Analizador de Texto.jpg>)
+![Analizador de texto](Analizador%20de%20Texto.jpg)
 
 
 ## 2. HTML semántico
 * El archivo HTML tiene una estructura básica con etiquetas <html>, <head>, y <body>.
 * Se incluye una hoja de estilos externa (style.css) utilizando la etiqueta <link>.
-* La sección <header> contiene un título principal <h1> que indica el propósito de la página.
-* Después del <header>, hay un <h2> que proporciona instrucciones a los usuarios para ingresar el texto que desean analizar en el área de texto (<textarea>).
-* A continuación, se define un elemento <ul> con la clase "all". 
-* Dentro de este elemento, hay seis elementos <li> con la clase "box", cada uno con un atributo data-testid que se utilizará para actualizar los resultados del análisis posteriormente.
+* La sección <header> contiene un título principal "<h1>" que indica el propósito de la página.
+* Después del <header>, hay un "<h2>" que proporciona instrucciones a los usuarios para ingresar el texto que desean analizar en el área de texto (<textarea>).
+* A continuación, se define un elemento "<ul>" con la clase "all". 
+* Dentro de este elemento, hay seis elementos "<li>" con la clase "box", cada uno con un atributo data-testid que se utilizará para actualizar los resultados del análisis posteriormente.
 * Luego se encuentra un botón con el id "reset-button", que se utilizará para limpiar el contenido del área de texto y restablecer los resultados del análisis.
 * Finalmente, se incluyen dos scripts: "analyzer.js" y "index.js" con el atributo type="module", lo que permite la importación y exportación de módulos JavaScript.
 
