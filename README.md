@@ -1,22 +1,19 @@
 # Analizador de texto
 
-## 1. Visualización del Proyecto
-
-* Proyecto.
-![Analizador de texto](Analizador%20de%20Texto.jpg)
 
 
-## 2. HTML semántico
+
+## 1. HTML semántico
 * El archivo HTML tiene una estructura básica con etiquetas <html>, <head>, y <body>.
 * Se incluye una hoja de estilos externa (style.css) utilizando la etiqueta <link>.
-* La sección <header> contiene un título principal "<h1>" que indica el propósito de la página.
-* Después del <header>, hay un "<h2>" que proporciona instrucciones a los usuarios para ingresar el texto que desean analizar en el área de texto (<textarea>).
-* A continuación, se define un elemento "<ul>" con la clase "all". 
-* Dentro de este elemento, hay seis elementos "<li>" con la clase "box", cada uno con un atributo data-testid que se utilizará para actualizar los resultados del análisis posteriormente.
+* La sección <header> contiene un título principal h1 que indica el propósito de la página.
+* Después del <header>, hay un h2 que proporciona instrucciones a los usuarios para ingresar el texto que desean analizar en el área de texto (<textarea>).
+* A continuación, se define un elemento ul con la clase "all". 
+* Dentro de este elemento, hay seis elementos li con la clase "box", cada uno con un atributo data-testid que se utilizará para actualizar los resultados del análisis posteriormente.
 * Luego se encuentra un botón con el id "reset-button", que se utilizará para limpiar el contenido del área de texto y restablecer los resultados del análisis.
 * Finalmente, se incluyen dos scripts: "analyzer.js" y "index.js" con el atributo type="module", lo que permite la importación y exportación de módulos JavaScript.
 
-## 3. CSS
+## 2. CSS
 
 Estilos generales:
 
@@ -43,7 +40,7 @@ Estilos del efecto de resplandor (#reset-button::before):
 * #reset-button::before: Crea un pseudo-elemento ::before que se superpondrá al botón de reinicio. El pseudo-elemento ocupa todo el espacio disponible con un fondo degradado lineal similar al del botón. La propiedad filter: blur(8px) aplica un desenfoque a este pseudo-elemento. También se aplica la misma animación "glowing" para que el resplandor aparezca en el fondo del botón. El z-index se establece en -1 para que el pseudo-elemento esté detrás del botón principal.
 
 
-## 4. Index.js
+## 3. Index.js
 
 * Importación del módulo analyzer: Se importa el módulo analyzer que contiene todas las funciones relacionadas con el análisis de texto. Esto permite utilizar las funciones definidas en el módulo para realizar el análisis del texto ingresado por el usuario.
 
@@ -76,7 +73,7 @@ Establece el valor del área de texto (textarea.value) como una cadena vacía, l
 Luego, llama a la función resetMetrics() para restablecer todas las métricas a cero y actualizar el contenido de la lista de métricas en el DOM.
 
 
-## 5. Analyzer.js
+## 4. Analyzer.js
 
 * Objeto analyzer: El archivo define un objeto llamado analyzer que contiene varias funciones para realizar el análisis de texto.
 
