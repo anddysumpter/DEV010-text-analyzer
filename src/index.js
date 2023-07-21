@@ -2,13 +2,13 @@ import analyzer from './analyzer.js';
 
 
 //Obtener referencias a los elementos del DOM,
-const textarea = document.querySelector('textarea');
+const textarea = document.querySelector('textarea');//
 const metricsList = document.querySelector('ul.all');
 const resetButton = document.getElementById('reset-button');
 
 //Agregar eventos a los elementos
-textarea.addEventListener('keyup', updateMetrics);
-resetButton.addEventListener('click', clearInputText);
+textarea.addEventListener('keyup', updateMetrics);// Se agregó un evento de tecla pulsada,Cuando el usuario escribe en el área de texto, se llama a la función updateMetrics. 
+resetButton.addEventListener('click', clearInputText);//se usa cuando se hace click en el elemento asociado, Cuando se hace clic en el botón de restablecimiento, se llama a la función clearInputText.
 
 function updateMetrics() {
   const text = textarea.value;//Obtener el texto ingresado en textarea
